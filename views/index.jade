@@ -1,6 +1,160 @@
-extends layout
-
-block content
-  h3 Welcome to roots!
-  :markdown
-    Find tutorials and documentation at http://roots.cx : )
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Budgetmeester
+    link(rel='stylesheet', href='font-awesome.min.css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='bootstrap.css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='owl.carousel.min.css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='owl.theme.default.min.css', media='screen', charset='utf-8')
+    link(rel='stylesheet', href='style.css', media='screen', charset='utf-8')
+    script(src='javascripts/jquery-3.1.1.min.js', charset='utf-8')
+    script(src='javascripts/tether.min.js', charset='utf-8')
+    script(src='javascripts/bootstrap.min.js', charset='utf-8')
+    script(src='javascripts/owl.carousel.js', charset='utf-8')
+    script(src='javascripts/scripts.js', charset='utf-8')
+  body.bm
+    // NAVIGATIE
+    nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse.fixed-top
+      button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarToggler')
+        span.navbar-toggler-icon
+      .container
+        a.navbar-brand.mr-auto(href='#')
+          img(src='images/logo.png', alt='budgetmeester')
+        .navbar-wrapper
+          #navbarToggler.collapse.navbar-collapse
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link(href='#') Over ons
+              li.nav-item
+                a.nav-link(href='#') Diensten
+              li.nav-item
+                a.nav-link(href='#') Contact
+    // EINDE NAVIGATIE
+    // CAROUSEL
+    .carousel
+      .owl-carousel.owl-theme(role='listbox')
+        div(style='background-image: url(images/header-3.jpg); background-size: cover; height: 100%; background-position: 0 100%;')
+          .carousel-caption-wrapper
+            .carousel-caption
+              .container
+                h1 Financieel advies
+                p Uw eerste stap naar een financieel gezondere leefsituatie.
+                .carousel-actions
+                  button.btn.btn-primary(type='button') Primary
+                  button.btn.btn-outline-secondary.light(type='button') Secondary
+        div(style='background-image: url(images/header-2.jpg); background-size: cover; height: 100%; background-position: 0 100%;')
+          .carousel-caption-wrapper
+            .carousel-caption
+              .container
+                h1 Neem nu contact op
+                p
+                  | Bel 
+                  a(href='#') 0612345678
+                  |  om direct een afspraak te maken.
+    // END CAROUSEL
+    // FOR WHO
+    section.section-lg
+      .container
+        .row
+          .col
+            img(src='images/broken-piggy-bank.jpg', alt='')
+          .col
+            h2 Voor wie
+            p
+              | Bij ons bent u aan het juiste adres, als u één of meer van de
+              | volgende vragen met Nee moet beantwoorden:
+            ul
+              li Heeft u inzicht in uw persoonlijke financiële situatie?
+              li Bereikt u uw financiële doelen die u voor ogen had?
+              li Heeft u de persoonlijke wil en kennis om de juiste financiële keuzes te maken?
+              li
+                | Ziet u door het rekeningenbos de bomen niet meer en laat u rekeningen soms ongeopend liggen?
+    // END FOR WHO
+    // WHAT WE DO
+    section.section-lg.bg-dark
+      .container
+        .row.align-items-center
+          .col
+            h3 Wat wij doen
+          .col-md-6.border-left
+            h4.text-light
+              | Budgetmeester houdt zich bezig met het coachen en begeleiden van
+              | zowel gezinnen als individuen om hun financiële problemen op te
+              | lossen.
+          .col
+            button.btn.btn-primary(type='button') Bekijk onze aanpak
+    // END WHAT WE DO
+    // ABOUT US
+    section.section-lg
+      .container.text-center
+        h2.divider-center Over ons
+        .row
+          .col-xs-12.col-lg-4
+            .quote
+              .quote-header
+                img(src='images/tim.png', alt='Tim van Kralingen')
+              .quote-body
+                // <q>Ik ben gewoon heel goed</q>
+              .quote-meta
+                .quote-meta
+                  cite Tim van Kralingen
+                  // <p>(CEO &amp; oprichter)</p>
+          .col-xs-12.col-lg-4
+            h4.mr-top.mr-bottom Wij doen er alles aan om jou op weg te helpen
+            p
+              | Wij zijn Tim en Peter. Samen hebben wij jaren lang ervaring in het scherp inzichtelijk
+              | krijgen van financiële situaties. Door onze opleidingen en werkervaring op het gebied
+              | van coachen, zijn wij in staat om u stap voor stap te begeleiden naar een betere
+              | financiële situatie. Helpen is onze hobby!
+            button.btn.btn-outline-primary(type='button', name='button') Lees meer
+          .col-xs-12.col-lg-4
+            .quote
+              .quote-header
+                img(src='images/peter.png', alt='Peter van Kralingen')
+              .quote-body
+                // <q>Ik ben gewoon heel goed</q>
+              .quote-meta
+                cite Peter van Kralingen
+                // <p>(CEO &amp; oprichter)</p>
+    // END ABOUT US
+    section.section-lg.bg-grey
+      p.text-center.m-0
+        | Hier kunnen alle partners komen of certificaten
+    // FOOTER
+    section.section-lg.bg-dark
+      .container
+        .row
+          .col
+            h4 Navigation
+            hr.hr.bg-highlight-dark
+            ul.footer-navigation
+              li
+                a(href='#') Over ons
+              li
+                a(href='#') Diensten
+              li
+                a(href='#') Contact
+          .col
+            h4 Contact info
+            hr.hr.bg-highlight-dark
+            ul.list.footer-contact-info
+              li
+                span.fa.fa-phone
+                |                 +31 612345678
+              li
+                span.fa.fa-envelope
+                a(href='mailto:info@budgetmeester.n') info@budgetmeester.nl
+              li
+                span.fa.fa-clock-o
+                |                 9:00 - 17:00
+              li
+                span.fa.fa-map-marker
+                p
+                  b Schouwstraat 52
+                  br
+                  |                   1826 AX Alkmaar
+    // END FOOTER
+    section.bg-darker.py-3
+      p.text-center.m-0(style='color:#005377;')
+        | Copyright 2017 Budgetmeester.
