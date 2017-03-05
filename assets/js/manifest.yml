@@ -1,0 +1,6 @@
+# manifest.yml
+- vendor/jquery-3.1.1.min.js
+- vendor/tether.min.js
+- vendor/bootstrap.min.js
+- vendor/owl.carousel.js
+- scripts.js

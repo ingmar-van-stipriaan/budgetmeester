@@ -5,6 +5,7 @@
     "autoprefixer-stylus": "0.5.x",
     "axis": "0.3.x",
     "coffee-script": "1.8.x",
+    "css": "^2.2.1",
     "css-pipeline": "0.2.x",
     "jade": "1.x",
     "js-pipeline": "0.2.x",

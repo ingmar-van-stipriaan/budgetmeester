@@ -8,15 +8,14 @@ module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
 
   extensions: [
-    js_pipeline(files: 'assets/js/*.coffee'),
-    css_pipeline(files: 'assets/css/*.styl')
+    js_pipeline(manifest: "assets/js/manifest.yml"),
+    css_pipeline(files: 'assets/css/*.css')
   ]
 
-  stylus:
-    use: [axis(), rupture(), autoprefixer()]
+  css:
     sourcemap: true
 
-  'coffee-script':
+  js:
     sourcemap: true
 
   jade:

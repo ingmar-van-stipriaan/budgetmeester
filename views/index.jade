@@ -3,16 +3,8 @@ html
   head
     meta(charset='utf-8')
     title Budgetmeester
-    link(rel='stylesheet', href='font-awesome.min.css', media='screen', charset='utf-8')
-    link(rel='stylesheet', href='bootstrap.css', media='screen', charset='utf-8')
-    link(rel='stylesheet', href='owl.carousel.min.css', media='screen', charset='utf-8')
-    link(rel='stylesheet', href='owl.theme.default.min.css', media='screen', charset='utf-8')
-    link(rel='stylesheet', href='style.css', media='screen', charset='utf-8')
-    script(src='javascripts/jquery-3.1.1.min.js', charset='utf-8')
-    script(src='javascripts/tether.min.js', charset='utf-8')
-    script(src='javascripts/bootstrap.min.js', charset='utf-8')
-    script(src='javascripts/owl.carousel.js', charset='utf-8')
-    script(src='javascripts/scripts.js', charset='utf-8')
+    != css()
+    != js()
   body.bm
     // NAVIGATIE
     nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse.fixed-top
@@ -20,7 +12,7 @@ html
         span.navbar-toggler-icon
       .container
         a.navbar-brand.mr-auto(href='#')
-          img(src='images/logo.png', alt='budgetmeester')
+          img(src='img/logo.png', alt='budgetmeester')
         .navbar-wrapper
           #navbarToggler.collapse.navbar-collapse
             ul.navbar-nav
@@ -34,7 +26,7 @@ html
     // CAROUSEL
     .carousel
       .owl-carousel.owl-theme(role='listbox')
-        div(style='background-image: url(images/header-3.jpg); background-size: cover; height: 100%; background-position: 0 100%;')
+        div(style='background-image: url(img/header-3.jpg); background-size: cover; height: 100%; background-position: 0 100%;')
           .carousel-caption-wrapper
             .carousel-caption
               .container
@@ -43,7 +35,7 @@ html
                 .carousel-actions
                   button.btn.btn-primary(type='button') Primary
                   button.btn.btn-outline-secondary.light(type='button') Secondary
-        div(style='background-image: url(images/header-2.jpg); background-size: cover; height: 100%; background-position: 0 100%;')
+        div(style='background-image: url(img/header-2.jpg); background-size: cover; height: 100%; background-position: 0 100%;')
           .carousel-caption-wrapper
             .carousel-caption
               .container
@@ -58,7 +50,7 @@ html
       .container
         .row
           .col
-            img(src='images/broken-piggy-bank.jpg', alt='')
+            img(src='img/broken-piggy-bank.jpg', alt='')
           .col
             h2 Voor wie
             p
@@ -93,13 +85,10 @@ html
           .col-xs-12.col-lg-4
             .quote
               .quote-header
-                img(src='images/tim.png', alt='Tim van Kralingen')
-              .quote-body
-                // <q>Ik ben gewoon heel goed</q>
+                img(src='img/tim.png', alt='Tim van Kralingen')
               .quote-meta
                 .quote-meta
                   cite Tim van Kralingen
-                  // <p>(CEO &amp; oprichter)</p>
           .col-xs-12.col-lg-4
             h4.mr-top.mr-bottom Wij doen er alles aan om jou op weg te helpen
             p
@@ -111,7 +100,7 @@ html
           .col-xs-12.col-lg-4
             .quote
               .quote-header
-                img(src='images/peter.png', alt='Peter van Kralingen')
+                img(src='img/peter.png', alt='Peter van Kralingen')
               .quote-body
                 // <q>Ik ben gewoon heel goed</q>
               .quote-meta
