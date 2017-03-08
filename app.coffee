@@ -8,7 +8,7 @@ module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
 
   extensions: [
-    js_pipeline(manifest: "assets/js/manifest.yml"),
+    js_pipeline(manifest: "assets/js/manifest.yml", out: 'js/build.js', minify: true),
     css_pipeline(files: 'assets/css/*.css')
   ]
 
@@ -17,6 +17,3 @@ module.exports =
 
   js:
     sourcemap: true
-
-  jade:
-    pretty: true

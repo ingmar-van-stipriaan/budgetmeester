@@ -54,8 +54,7 @@ html
               li Heeft u inzicht in uw persoonlijke financiële situatie?
               li Bereikt u uw financiële doelen die u voor ogen had?
               li Heeft u de persoonlijke wil en kennis om de juiste financiële keuzes te maken?
-              li
-                | Ziet u door het rekeningenbos de bomen niet meer en laat u rekeningen soms ongeopend liggen?
+              li U bent niet bang om de binnenkomende rekeningen te openen
     // END FOR WHO
     // WHAT WE DO
     section.section-lg.bg-dark
@@ -123,6 +122,17 @@ html
                   b Schouwstraat 52
                   br
                   | 1826 AZ Alkmaar
+          .col
+            h4 Contact
+            hr.hr.bg-highlight-dark
+            form(id="contact-form")
+              .form-group
+                label(for="email") Email adres
+                input(type="email" class="form-control" id="email" name="email" placeholder="Vul uw email in")
+              .form-group
+                label(for="message") Bericht
+                textarea(class="form-control" id="message" name="message" placeholder="Wat wilt u aan ons kwijt?")
+               button(type="submit" class="btn btn-primary") Submit
     // END FOOTER
     section.bg-darker.py-3
       p.text-center.m-0(style='color:#005377;')
